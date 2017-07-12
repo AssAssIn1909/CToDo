@@ -10,8 +10,8 @@ namespace ToDo
 		{
 			switch (args[0].ToUpper())
 			{
-				case "READ":
-					_ReadAllTask();
+				case "SHOW":
+					_ShowAllTask();
 					break;
 				case "ADD":
 					_AddTask(args[1]);
@@ -51,7 +51,10 @@ namespace ToDo
 			var tasks = FileService.CrateOrRead();
 			tasks.First(t => t.Id == taskId).Done = !tasks.First(t => t.Id == taskId).Done;
 			FileService.Save(tasks);
-			Console.WriteLine($"You completed task number {id}");
+			if (tasks.First(t=>t.Id==taskId).Done)			
+				Console.WriteLine($"You completed task number {id}");
+			else
+				Console.WriteLine($"You change status in task number {id}");
 		}
 
 		private static void _AddTask(string taskName)
@@ -62,7 +65,7 @@ namespace ToDo
 			Console.WriteLine($"you added a new task to the list.");
 		}
 
-		private static void _ReadAllTask()
+		private static void _ShowAllTask()
 		{
 			var tasks = FileService.CrateOrRead();
 			_WriteInConsole(tasks);
