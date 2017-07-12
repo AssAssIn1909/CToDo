@@ -1,6 +1,0 @@
-c:\users\luki2\documents\visual studio 2017\Projects\ToDo\ToDo\bin\Debug\ToDo.exe.config
-c:\users\luki2\documents\visual studio 2017\Projects\ToDo\ToDo\bin\Debug\ToDo.exe
-c:\users\luki2\documents\visual studio 2017\Projects\ToDo\ToDo\bin\Debug\ToDo.pdb
-c:\users\luki2\documents\visual studio 2017\Projects\ToDo\ToDo\obj\Debug\ToDo.csprojResolveAssemblyReference.cache
-c:\users\luki2\documents\visual studio 2017\Projects\ToDo\ToDo\obj\Debug\ToDo.exe
-c:\users\luki2\documents\visual studio 2017\Projects\ToDo\ToDo\obj\Debug\ToDo.pdb
