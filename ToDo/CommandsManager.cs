@@ -62,7 +62,7 @@ namespace ToDo
 			var tasks = FileService.CrateOrRead();
 			tasks.Add(new Task(taskName));
 			FileService.Save(tasks);
-			Console.WriteLine($"you added a new task to the list.");
+			Console.WriteLine($"You added a new task to the list.");
 		}
 
 		private static void _ShowAllTask()
