@@ -51,6 +51,7 @@ namespace ToDo
 			var tasks = FileService.CrateOrRead();
 			tasks.First(t => t.Id == taskId).Done = !tasks.First(t => t.Id == taskId).Done;
 			FileService.Save(tasks);
+			Console.WriteLine($"You completed task number {id}");
 		}
 
 		private static void _AddTask(string taskName)
@@ -58,6 +59,7 @@ namespace ToDo
 			var tasks = FileService.CrateOrRead();
 			tasks.Add(new Task(taskName));
 			FileService.Save(tasks);
+			Console.WriteLine($"you added a new task to the list.");
 		}
 
 		private static void _ReadAllTask()
