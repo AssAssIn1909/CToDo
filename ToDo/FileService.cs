@@ -16,11 +16,13 @@ namespace ToDo
 				foreach (var task in stringTasks)
 				{
 					var parts = task.Split(new char[] { ',' });
+
+					bool.TryParse(parts[1], out bool done);
 					var newTask = new Task
 					{
 						Id = tasks.Count,
 						Name = parts[0],
-						Done = bool.Parse(parts[1])
+						Done = done
 					};
 					tasks.Add(newTask);
 				}
